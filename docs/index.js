@@ -14,8 +14,8 @@ fetch(fileUrl)
   	console.log(typeof data);
   	var all_x = data.split('\n')[0]);
   	var all_y = data.split('\n')[1]);
-  	var array_x = str.match(/\d+(?:\.\d+)?/g).map(all_x);
-  	var array_y = str.match(/\d+(?:\.\d+)?/g).map(all_y);
+  	var array_x = all_x.match(/\d+(?:\.\d+)?/g).map(Number);
+  	var array_y = all_y.match(/\d+(?:\.\d+)?/g).map(Number);
   	console.log(typeof array_x);
   	trace1.x = array_x;
   	trace1.y = array_y;
