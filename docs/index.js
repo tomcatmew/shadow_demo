@@ -23,4 +23,13 @@ var layout = {
   }
 };
 
+const fileUrl = 'training_record/train_walk_256_1' // provide file location
+
+fetch(fileUrl)
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+  	console.log(data);
+  });
+
 Plotly.newPlot('myDiv', data, layout);
