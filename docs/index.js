@@ -14,8 +14,11 @@ fetch(fileUrl)
   	console.log(typeof data);
   	var all_x = data.split('\n')[0];
   	var all_y = data.split('\n')[1];
-  	var array_x = all_x.split(' ').match(/\d+(?:\.\d+)?/g).map(Number);
-  	var array_y = all_y.split(' ').match(/\d+(?:\.\d+)?/g).map(Number);
+  	console.log(all_x);
+  	var array_x = all_x.split(' ').map(function(item) {
+    return parseFloat(item, 10);});
+  	var array_y = all_y.split(' ').map(function(item) {
+    return parseFloat(item, 10);});
   	console.log(typeof array_x);
   	console.log(array_x);
   	trace1.x = array_x;
