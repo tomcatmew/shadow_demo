@@ -1,6 +1,6 @@
 var trace1 = {
-  x: [],
-  y: [],
+  x: [0],
+  y: [0],
   type: 'scatter'
 };
 
@@ -11,6 +11,9 @@ fetch(fileUrl)
   .then(data => {
   	// Do something with your data
   	console.log(data);
+  	console.log(typeof data);
+  	console.log(data.split('\n')[0]);
+  	console.log(data.split('\n')[1]);
   	trace1.x = data.split('\n')[0];
   	trace1.y = data.split('\n')[1];
   });
