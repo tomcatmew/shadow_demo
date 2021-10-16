@@ -12,8 +12,8 @@ fetch(fileUrl)
   	// Do something with your data
   	console.log(data);
   	console.log(typeof data);
-  	var all_x = data.split('\n')[0]);
-  	var all_y = data.split('\n')[1]);
+  	var all_x = data.split('\n')[0];
+  	var all_y = data.split('\n')[1];
   	var array_x = all_x.match(/\d+(?:\.\d+)?/g).map(Number);
   	var array_y = all_y.match(/\d+(?:\.\d+)?/g).map(Number);
   	console.log(typeof array_x);
